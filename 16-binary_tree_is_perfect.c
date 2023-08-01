@@ -15,10 +15,15 @@ int if_perfect(const binary_tree_t *tree)
 		a = 1 + if_perfect(tree->right);
 		if (a == b && a != 0 && b != 0)
 			return (a);
-	} else if (!tree->left && !tree->right)
-		return (1);
-	else
 		return (0);
+	} else if (!tree->left && !tree->right)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
 /**
  * binary_tree_is_perfect - check if binary tree is perfect
